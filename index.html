@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jadel Ateliers | Braided Wigs | Houston & Dallas-Fort Worth</title>
+<meta name="description" content="Beautiful, natural, custom braided wigs made for you. Serving Houston and the Dallas-Fort Worth area.">
+<style>
+  :root{--rose:#b76e79;--rose-light:#f3c9d0;--rose-dark:#7a3f4a;--brown:#2e211e;--cream:#fbf3ef;--ink:#222;--white:#fff}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  .sans{font-family:Arial,Helvetica,sans-serif}
+  .btn{display:inline-block;padding:12px 26px;border-radius:999px;border:0;cursor:pointer;font:700 15px Arial,sans-serif;background:var(--rose);color:var(--white);transition:.15s}
+  .btn:hover{transform:translateY(-2px);background:var(--rose-dark)}
+  .btn.outline{background:transparent;border:2px solid var(--rose);color:var(--rose-dark)}
+  .btn.outline:hover{background:var(--rose);color:var(--white)}
+  .btn.small{padding:9px 18px;font-size:14px}
+
+  header{position:sticky;top:0;z-index:20;background:var(--brown);color:var(--cream)}
+  .nav{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:14px 20px;gap:12px;flex-wrap:wrap}
+  .logo{font-size:22px;letter-spacing:3px;font-weight:700}
+  .logo span{color:var(--rose)}
+  nav a{font:14px Arial,sans-serif;margin-right:18px;opacity:.9}
+  nav a:hover{color:var(--rose-light)}
+  .cart-btn{background:var(--rose);color:#fff;border:0;border-radius:999px;padding:9px 18px;cursor:pointer;font:700 14px Arial,sans-serif}
+  .cart-btn b{background:#fff;color:var(--rose-dark);border-radius:999px;padding:1px 8px;margin-left:6px}
+
+  .hero{background:linear-gradient(135deg,#3a2622,#7a3f4a);color:var(--cream);padding:90px 0;text-align:center}
+  .hero small{font:12px Arial,sans-serif;letter-spacing:5px;text-transform:uppercase;opacity:.85}
+  .hero h1{font-size:clamp(34px,6vw,60px);margin:14px 0}
+  .hero h1 em{color:var(--rose-light)}
+  .hero p{max-width:560px;margin:0 auto 28px;opacity:.92}
+  .hero .btn{margin:6px}
+
+  section{padding:70px 0}
+  .title{text-align:center;margin-bottom:34px}
+  .title h2{font-size:clamp(26px,4vw,38px);color:var(--rose-dark)}
+  .title p{font:15px Arial,sans-serif;color:#777;margin-top:6px}
+
+  .filters{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:30px;font-family:Arial,sans-serif}
+  .chip{padding:8px 18px;border-radius:999px;border:1.5px solid var(--rose);background:transparent;color:var(--rose-dark);cursor:pointer;font:600 14px Arial,sans-serif}
+  .chip.active{background:var(--rose);color:#fff}
+  .filters select{padding:8px 14px;border-radius:999px;border:1.5px solid var(--rose);font:14px Arial,sans-serif;background:#fff}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:24px}
+  .product{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.08);display:flex;flex-direction:column}
+  .pimg{height:230px;background-size:cover;background-position:center;position:relative}
+  .pimg.ph{background:
+     repeating-linear-gradient(100deg,rgba(255,255,255,.07) 0 6px,rgba(0,0,0,.18) 6px 12px),
+     linear-gradient(160deg,#241714,#5a3a33)}
+  .pimg .tag{position:absolute;top:12px;left:12px;background:var(--rose);color:#fff;font:700 11px Arial,sans-serif;padding:4px 10px;border-radius:999px;letter-spacing:1px;text-transform:uppercase}
+  .pbody{padding:18px;display:flex;flex-direction:column;gap:8px;flex:1;font-family:Arial,sans-serif}
+  .pbody h3{font:700 19px Georgia,serif;color:var(--brown)}
+  .pbody p{font-size:14px;color:#666;flex:1}
+  .opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .opts select{padding:8px;border:1px solid #ddd;border-radius:8px;font:13px Arial,sans-serif;width:100%}
+  .prow{display:flex;align-items:center;justify-content:space-between;margin-top:4px}
+  .price{font:700 20px Georgia,serif;color:var(--rose-dark)}
+  .empty{text-align:center;color:#888;font-family:Arial,sans-serif;grid-column:1/-1;padding:30px}
+
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;font-family:Arial,sans-serif}
+  .step{background:#fff;border-radius:16px;padding:26px;border-top:5px solid var(--rose);box-shadow:0 6px 18px rgba(0,0,0,.06)}
+  .step .n{font:700 30px Georgia,serif;color:var(--rose)}
+  .step h3{font-family:Georgia,serif;margin:6px 0}
+  .step p{font-size:14px;color:#666}
+
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .split img{border-radius:18px;box-shadow:0 12px 34px rgba(0,0,0,.25)}
+  .split h2{color:var(--rose-dark);font-size:clamp(26px,3.5vw,36px);margin-bottom:12px}
+  .split ul{margin:14px 0 22px 20px;font-family:Arial,sans-serif}
+
+  #custom{background:#fff}
+  form.box{max-width:640px;margin:0 auto;display:grid;gap:14px;font-family:Arial,sans-serif}
+  input,select,textarea{padding:13px;border:1px solid #ccc;border-radius:10px;font:15px Arial,sans-serif;width:100%}
+  textarea{min-height:100px;resize:vertical}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+  .areas{background:var(--brown);color:var(--cream)}
+  .areas .title h2{color:var(--rose-light)}
+  .areas .title p{color:#d9c4bd}
+  .area-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;font-family:Arial,sans-serif}
+  .area{background:rgba(255,255,255,.07);border-radius:16px;padding:26px}
+  .area h3{font-family:Georgia,serif;color:var(--rose);margin-bottom:6px}
+
+  details{background:#fff;border-radius:12px;padding:16px 20px;margin-bottom:12px;font-family:Arial,sans-serif;box-shadow:0 3px 10px rgba(0,0,0,.05)}
+  summary{cursor:pointer;font-weight:700;color:var(--rose-dark)}
+  details p{margin-top:10px;color:#555;font-size:15px}
+
+  footer{background:#171110;color:#bbb;text-align:center;padding:34px 20px;font:14px Arial,sans-serif}
+  footer b{color:var(--rose)}
+  footer a{color:var(--rose-light)}
+
+  /* Cart drawer */
+  .overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:.25s;z-index:30}
+  .overlay.open{opacity:1;pointer-events:auto}
+  .drawer{position:fixed;top:0;right:0;height:100%;width:min(440px,100%);background:#fff;z-index:40;transform:translateX(100%);transition:.3s;display:flex;flex-direction:column;font-family:Arial,sans-serif}
+  .drawer.open{transform:translateX(0)}
+  .dhead{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;background:var(--brown);color:#fff}
+  .dhead h3{font-family:Georgia,serif}
+  .dhead button{background:none;border:0;color:#fff;font-size:26px;cursor:pointer}
+  .dbody{flex:1;overflow:auto;padding:16px 20px}
+  .item{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid #eee;font-size:14px}
+  .item small{color:#777;display:block}
+  .qty{display:flex;align-items:center;gap:8px;margin-top:6px}
+  .qty button{width:26px;height:26px;border-radius:50%;border:1px solid var(--rose);background:#fff;cursor:pointer;font-weight:700}
+  .rm{background:none;border:0;color:#b33;cursor:pointer;font-size:12px;text-decoration:underline}
+  .dfoot{padding:16px 20px;border-top:1px solid #eee;background:#fafafa}
+  .total{display:flex;justify-content:space-between;font:700 18px Arial,sans-serif;margin-bottom:10px}
+  .dfoot input,.dfoot select,.dfoot textarea{padding:10px;font-size:14px;margin-bottom:8px}
+  .dfoot textarea{min-height:60px}
+  .actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .actions .btn{padding:11px 8px;font-size:13px}
+  .note{font-size:12px;color:#777;margin-top:8px}
+  .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(100px);background:var(--brown);color:#fff;padding:12px 22px;border-radius:999px;font:14px Arial,sans-serif;z-index:50;transition:.3s}
+  .toast.show{transform:translateX(-50%) translateY(0)}
+
+  @media(max-width:800px){.split,.two{grid-template-columns:1fr}.hero{padding:60px 0}nav a{margin-right:12px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">JADEL <span>ATELIERS</span></div>
+    <nav>
+      <a href="#shop">Shop</a>
+      <a href="#how">How It Works</a>
+      <a href="#custom">Custom Order</a>
+      <a href="#areas">Areas</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-btn" id="openCart">Cart <b id="cartCount">0</b></button>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <small>Braided Wigs</small>
+    <h1>Beautiful. Natural. <em>Made for you.</em></h1>
+    <p>Handcrafted braided wigs that give you style, beauty, and confidence. Serving Houston and the Dallas-Fort Worth area.</p>
+    <a class="btn" href="#shop">Shop Wigs</a>
+    <a class="btn outline" style="color:#fff;border-color:#fff" href="#custom">Custom Order</a>
+  </div>
+</div>
+
+<section id="shop">
+  <div class="wrap">
+    <div class="title"><h2>Our Braided Wigs</h2><p>Pick your style, length, and color, then add to your cart.</p></div>
+    <div class="filters">
+      <div id="styleChips"></div>
+      <select id="sort">
+        <option value="featured">Sort: Featured</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+      </select>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="how" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="title"><h2>How It Works</h2><p>Simple ordering from start to finish.</p></div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Choose</h3><p>Pick a style, length, and color, or request a custom design.</p></div>
+      <div class="step"><div class="n">2</div><h3>Send Your Order</h3><p>Check out from the cart. Your order goes to us by text or email.</p></div>
+      <div class="step"><div class="n">3</div><h3>Confirm</h3><p>We confirm your details, total, and timeline, then arrange payment.</p></div>
+      <div class="step"><div class="n">4</div><h3>Receive</h3><p>Pick up locally or choose delivery in the Houston or DFW area.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="flyer" style="background:#fff">
+  <div class="wrap split">
+    <img src="flyer-wigs.jpg" alt="Jadel Ateliers Braided Wigs flyer" onerror="this.style.display='none'">
+    <div>
+      <h2>Style. Beauty. Confidence.</h2>
+      <p class="sans">Every Jadel Ateliers wig is made with care, so you get a natural look without hours in the salon chair.</p>
+      <ul>
+        <li>Beautiful, natural braided styles</li>
+        <li>Made for you, in your length and color</li>
+        <li>Serving Houston and Dallas-Fort Worth</li>
+      </ul>
+      <a class="btn" href="#shop">Browse Styles</a>
+    </div>
+  </div>
+</section>
+
+<section id="custom">
+  <div class="wrap">
+    <div class="title"><h2>Request a Custom Wig</h2><p>Have a specific style in mind? Tell us about it.</p></div>
+    <form class="box" id="customForm">
+      <div class="two">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="tel" name="phone" placeholder="Phone number" required>
+      </div>
+      <div class="two">
+        <select name="style" required>
+          <option value="">Braid style</option>
+          <option>Knotless Braids</option><option>Box Braids</option>
+          <option>Cornrow / Feed-in Braids</option><option>Boho Braids</option>
+          <option>Other (describe below)</option>
+        </select>
+        <select name="area"><option>Houston</option><option>Dallas-Fort Worth</option></select>
+      </div>
+      <div class="two">
+        <input type="text" name="length" placeholder="Length (e.g., 22 inch)">
+        <input type="text" name="color" placeholder="Color (e.g., 1B, 27, burgundy)">
+      </div>
+      <textarea name="notes" placeholder="Describe your dream wig, add inspiration links, or tell us your deadline"></textarea>
+      <div class="two">
+        <button type="button" class="btn" id="customText">Send by Text</button>
+        <button type="button" class="btn outline" id="customEmail">Send by Email</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="areas" id="areas">
+  <div class="wrap">
+    <div class="title"><h2>Where We Serve</h2><p>Based in Texas, serving two major metro areas.</p></div>
+    <div class="area-grid">
+      <div class="area"><h3>Houston</h3><p>Houston, Katy, Sugar Land, Cypress, Pearland, The Woodlands, and nearby communities.</p></div>
+      <div class="area"><h3>Dallas-Fort Worth</h3><p>Dallas, Fort Worth, Plano, Frisco, Irving, Arlington, Garland, and nearby communities.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap" style="max-width:760px">
+    <div class="title"><h2>Frequently Asked Questions</h2></div>
+    <details><summary>How long does a wig take to make?</summary><p>Timelines depend on the style and length. We confirm your exact turnaround when we confirm your order.</p></details>
+    <details><summary>How do I pay?</summary><p>After you send your order, we confirm the total and share payment options. No payment is taken on this website.</p></details>
+    <details><summary>Do you deliver?</summary><p>We offer local pickup and delivery in the Houston and Dallas-Fort Worth areas. Delivery fees are confirmed with your order.</p></details>
+    <details><summary>Can I choose a custom length or color?</summary><p>Yes. Select options in the shop, or use the Custom Order form for something special.</p></details>
+    <details><summary>How do I care for my braided wig?</summary><p>Store it on a wig stand, keep it away from heat and tangles, and use a light moisturizing mist. We include care tips with every order.</p></details>
+  </div>
+</section>
+
+<section id="contact" style="background:#fff">
+  <div class="wrap" style="text-align:center">
+    <div class="title"><h2>Contact Us</h2></div>
+    <p class="sans" style="margin-bottom:18px">
+      Phone: <a href="tel:+13465731925" style="color:var(--rose-dark);font-weight:700">+1 (346) 573-1925</a><br>
+      Instagram: <a href="https://instagram.com/jadelateliers" target="_blank" rel="noopener" style="color:var(--rose-dark);font-weight:700">@JADELATELIERS</a>
+    </p>
+    <a class="btn" href="tel:+13465731925">Call to Book</a>
+  </div>
+</section>
+
+<footer>
+  <p><b>JADEL ATELIERS</b> &mdash; Braided Wigs</p>
+  <p>Serving Houston and Dallas-Fort Worth, Texas</p>
+  <p>Looking for cleaning services? Call <a href="tel:+13465731926">+1 (346) 573-1926</a></p>
+  <p>&copy; <span id="yr"></span> Jadel Ateliers. All rights reserved.</p>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Shopping cart">
+  <div class="dhead"><h3>Your Cart</h3><button id="closeCart" aria-label="Close cart">&times;</button></div>
+  <div class="dbody" id="cartItems"></div>
+  <div class="dfoot" id="cartFoot">
+    <div class="total"><span>Estimated total</span><span id="cartTotal">$0</span></div>
+    <input type="text" id="cName" placeholder="Your name" required>
+    <input type="tel" id="cPhone" placeholder="Phone number" required>
+    <div class="two" style="gap:8px">
+      <select id="cArea"><option>Houston</option><option>Dallas-Fort Worth</option></select>
+      <select id="cMethod"><option>Pickup</option><option>Delivery</option></select>
+    </div>
+    <textarea id="cNotes" placeholder="Notes (deadline, special requests)"></textarea>
+    <div class="actions">
+      <button class="btn" id="sendText">Text My Order</button>
+      <button class="btn outline" id="sendEmail">Email My Order</button>
+    </div>
+    <div class="actions" style="margin-top:8px">
+      <button class="btn outline" id="copyOrder">Copy Order</button>
+      <button class="btn outline" id="clearCart">Clear Cart</button>
+    </div>
+    <p class="note">No payment is taken here. We confirm your total and payment details after receiving your order.</p>
+  </div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============ EDIT THESE ============ */
+const CONFIG = {
+  phone: "+13465731925",                 // number that receives text orders
+  email: "jadelateliers@gmail.com",       // number-one thing to change: your real email
+  currency: "$"
+};
+
+// Prices are PLACEHOLDERS. Set your real prices. "img" is optional (e.g., "wig1.jpg").
+const PRODUCTS = [
+  {id:"kb",  name:"Knotless Bob Braids",       style:"Knotless", base:150, img:"", tag:"Bestseller", desc:"Lightweight knotless braids in a sleek bob. Soft, natural, and comfortable."},
+  {id:"kl",  name:"Knotless Long Braids",      style:"Knotless", base:220, img:"", tag:"",           desc:"Long, flowing knotless braids with a natural-looking part."},
+  {id:"bb",  name:"Classic Box Braids",        style:"Box Braids", base:180, img:"", tag:"",         desc:"Timeless box braids, neat and full, made to your length."},
+  {id:"bbm", name:"Medium Box Braids Bob",     style:"Box Braids", base:160, img:"", tag:"New",      desc:"A chic bob-length box braid wig that is easy to wear and style."},
+  {id:"cr",  name:"Feed-in Cornrow Wig",       style:"Cornrow", base:170, img:"", tag:"",            desc:"Clean, precise feed-in cornrows with a natural scalp look."},
+  {id:"bh",  name:"Boho Goddess Braids",       style:"Boho", base:240, img:"", tag:"Popular",        desc:"Braids with curly boho ends for a soft, romantic finish."}
+];
+const LENGTHS = [{l:'12"',add:0},{l:'16"',add:20},{l:'20"',add:40},{l:'24"',add:60},{l:'28"',add:80},{l:'32"',add:100}];
+const COLORS  = ["1B Natural Black","2 Dark Brown","4 Brown","27 Honey Blonde","350 Ginger","Burgundy"];
+/* ==================================== */
+
+const $ = s => document.querySelector(s);
+const money = n => CONFIG.currency + n.toLocaleString();
+let cart = [];
+let filter = "All";
+let sort = "featured";
+
+// ---- persistence (safe if storage is blocked)
+function save(){ try{ localStorage.setItem("jadel_cart", JSON.stringify(cart)); }catch(e){} }
+function load(){ try{ cart = JSON.parse(localStorage.getItem("jadel_cart")) || []; }catch(e){ cart = []; } }
+
+// ---- toast
+let tt;
+function toast(msg){
+  const t = $("#toast"); t.textContent = msg; t.classList.add("show");
+  clearTimeout(tt); tt = setTimeout(()=>t.classList.remove("show"), 2200);
+}
+
+// ---- shop rendering
+function renderChips(){
+  const styles = ["All", ...new Set(PRODUCTS.map(p=>p.style))];
+  $("#styleChips").innerHTML = styles.map(s =>
+    `<button class="chip ${s===filter?"active":""}" data-style="${s}">${s}</button>`).join(" ");
+}
+function renderGrid(){
+  let list = PRODUCTS.filter(p => filter==="All" || p.style===filter);
+  if(sort==="low") list.sort((a,b)=>a.base-b.base);
+  if(sort==="high") list.sort((a,b)=>b.base-a.base);
+  if(!list.length){ $("#grid").innerHTML = '<p class="empty">No wigs in this category yet.</p>'; return; }
+  $("#grid").innerHTML = list.map(p => `
+    <article class="product" data-id="${p.id}">
+      <div class="pimg ${p.img?"":"ph"}" ${p.img?`style="background-image:url('${p.img}')"`:""}>
+        ${p.tag?`<span class="tag">${p.tag}</span>`:""}
+      </div>
+      <div class="pbody">
+        <h3>${p.name}</h3>
+        <p>${p.desc}</p>
+        <div class="opts">
+          <select class="selLen" aria-label="Length">${LENGTHS.map((x,i)=>`<option value="${i}">${x.l}</option>`).join("")}</select>
+          <select class="selCol" aria-label="Color">${COLORS.map(c=>`<option>${c}</option>`).join("")}</select>
+        </div>
+        <div class="prow">
+          <span class="price" data-price>${money(p.base)}</span>
+          <button class="btn small" data-add>Add to Cart</button>
+        </div>
+      </div>
+    </article>`).join("");
+}
+
+// price update on length change + add to cart (event delegation)
+$("#grid").addEventListener("change", e=>{
+  if(!e.target.classList.contains("selLen")) return;
+  const card = e.target.closest(".product");
+  const p = PRODUCTS.find(x=>x.id===card.dataset.id);
+  card.querySelector("[data-price]").textContent = money(p.base + LENGTHS[e.target.value].add);
+});
+$("#grid").addEventListener("click", e=>{
+  if(!e.target.matches("[data-add]")) return;
+  const card = e.target.closest(".product");
+  const p = PRODUCTS.find(x=>x.id===card.dataset.id);
+  const len = LENGTHS[card.querySelector(".selLen").value];
+  const color = card.querySelector(".selCol").value;
+  const key = [p.id, len.l, color].join("|");
+  const price = p.base + len.add;
+  const found = cart.find(i=>i.key===key);
+  if(found) found.qty++; else cart.push({key, name:p.name, length:len.l, color, price, qty:1});
+  save(); renderCart(); toast("Added to cart");
+});
+$("#styleChips").addEventListener("click", e=>{
+  if(!e.target.dataset.style) return;
+  filter = e.target.dataset.style; renderChips(); renderGrid();
+});
+$("#sort").addEventListener("change", e=>{ sort = e.target.value; renderGrid(); });
+
+// ---- cart rendering
+function total(){ return cart.reduce((s,i)=>s+i.price*i.qty,0); }
+function renderCart(){
+  const count = cart.reduce((s,i)=>s+i.qty,0);
+  $("#cartCount").textContent = count;
+  $("#cartTotal").textContent = money(total());
+  if(!cart.length){
+    $("#cartItems").innerHTML = '<p class="empty">Your cart is empty.</p>';
+    $("#cartFoot").style.display = "none"; return;
+  }
+  $("#cartFoot").style.display = "block";
+  $("#cartItems").innerHTML = cart.map((i,idx)=>`
+    <div class="item">
+      <div>
+        <b>${i.name}</b>
+        <small>${i.length} &middot; ${i.color}</small>
+        <div class="qty">
+          <button data-dec="${idx}" aria-label="Decrease">-</button>
+          <span>${i.qty}</span>
+          <button data-inc="${idx}" aria-label="Increase">+</button>
+          <button class="rm" data-rm="${idx}">Remove</button>
+        </div>
+      </div>
+      <b>${money(i.price*i.qty)}</b>
+    </div>`).join("");
+}
+$("#cartItems").addEventListener("click", e=>{
+  const d=e.target.dataset;
+  if(d.inc!==undefined) cart[d.inc].qty++;
+  else if(d.dec!==undefined){ cart[d.dec].qty--; if(cart[d.dec].qty<1) cart.splice(d.dec,1); }
+  else if(d.rm!==undefined) cart.splice(d.rm,1);
+  else return;
+  save(); renderCart();
+});
+$("#clearCart").addEventListener("click", ()=>{ cart=[]; save(); renderCart(); });
+
+// ---- drawer open/close
+function drawer(open){
+  $("#drawer").classList.toggle("open",open);
+  $("#overlay").classList.toggle("open",open);
+}
+$("#openCart").onclick = ()=>drawer(true);
+$("#closeCart").onclick = ()=>drawer(false);
+$("#overlay").onclick = ()=>drawer(false);
+document.addEventListener("keydown", e=>{ if(e.key==="Escape") drawer(false); });
+
+// ---- build and send order
+function orderMessage(){
+  const name=$("#cName").value.trim(), phone=$("#cPhone").value.trim();
+  if(!name||!phone){ toast("Please enter your name and phone"); return null; }
+  const lines = cart.map(i=>`- ${i.qty} x ${i.name} (${i.length}, ${i.color}) = ${money(i.price*i.qty)}`);
+  return [
+    "NEW ORDER - Jadel Ateliers","",
+    ...lines,"",
+    "Estimated total: "+money(total()),
+    "Area: "+$("#cArea").value,
+    "Method: "+$("#cMethod").value,
+    "Name: "+name,
+    "Phone: "+phone,
+    "Notes: "+($("#cNotes").value.trim()||"None")
+  ].join("\n");
+}
+$("#sendText").onclick = ()=>{
+  const m = orderMessage(); if(!m) return;
+  location.href = `sms:${CONFIG.phone}?body=${encodeURIComponent(m)}`;
+};
+$("#sendEmail").onclick = ()=>{
+  const m = orderMessage(); if(!m) return;
+  location.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent("New Order - Jadel Ateliers")}&body=${encodeURIComponent(m)}`;
+};
+$("#copyOrder").onclick = async ()=>{
+  const m = orderMessage(); if(!m) return;
+  try{ await navigator.clipboard.writeText(m); toast("Order copied. Paste it into Instagram or any message."); }
+  catch(e){ toast("Copy not supported on this browser"); }
+};
+
+// ---- custom order form
+function customMessage(){
+  const f = $("#customForm");
+  if(!f.reportValidity()) return null;
+  const v = n => f.elements[n].value.trim() || "N/A";
+  return [
+    "CUSTOM WIG REQUEST - Jadel Ateliers","",
+    "Name: "+v("name"),"Phone: "+v("phone"),"Area: "+v("area"),
+    "Style: "+v("style"),"Length: "+v("length"),"Color: "+v("color"),
+    "Details: "+v("notes")
+  ].join("\n");
+}
+$("#customText").onclick = ()=>{ const m=customMessage(); if(m) location.href=`sms:${CONFIG.phone}?body=${encodeURIComponent(m)}`; };
+$("#customEmail").onclick = ()=>{ const m=customMessage(); if(m) location.href=`mailto:${CONFIG.email}?subject=${encodeURIComponent("Custom Wig Request")}&body=${encodeURIComponent(m)}`; };
+
+// ---- init
+$("#yr").textContent = new Date().getFullYear();
+load(); renderChips(); renderGrid(); renderCart();
+</script>
+</body>
+</html>
